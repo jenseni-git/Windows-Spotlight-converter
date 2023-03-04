@@ -1,0 +1,61 @@
+:: keep prompting the user for their home directory until they provide it as a flag.
+:no_flag_found
+	if not exist %1 (
+		echo "enter directory for user as a flag"
+		goto :no_flag_found
+	)
+	
+if not exist %1 exit echo "user flag found"
+
+:: if no directory to place files, create dir
+if not exist "C:\Users\%1\Desktop\Background_Photos\Windows_Spotlight_photos" mkdir C:\Users\%1\Desktop\Background_Photos\Windows_Spotlight_photos
+
+:: go to that dir
+cd C:\Users\%1\Desktop\Background_Photos\Windows_Spotlight_photos
+
+:: copy the files' location to that dir
+xcopy C:\Users\%1\AppData\Local\Packages\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\LocalState\Assets . /s
+
+:: rename them all to jpg files
+Ren *.* *.jpg
+
+:: del all of the Windows store app photos (They're not good enough for my desktop)
+del 0bfb6f414d22b5f7fc1fb8c87b0219721db470f61612e478332bfe5a9165551e.jpg
+del 0e49670dd118ceb2ecd77f9e51634c699cc7d75e75b285d12bfb662a433dbba1.jpg
+del 0f66c96c82de6d1862845d4bdfe4339cb5e57f1e16a47847175e0e93f0935d63.jpg
+del 1bc7240aa77373ba4f0a2425fb0dcc6d5cbf362058c61a14e9d3eb21736221b4.jpg
+del 2f9ba805f8191e6e5906eb9d9b1ee50ea4ef7ce1cfaeb8382b147f6b3223823d.jpg
+del 3b6327b17d948c5c2541851ad0c3542b3dffa4eca5320cb4b79fe716e1de0824.jpg
+del 3ea97346d827b46149bffb5ba3a462621f3a2f797d80a0395f8c3f70fbd809a7.jpg
+del 4fafc7ca4af50c9817053f2233923fd73a47d6aa6c64c3b3ab9bf39f79984d62.jpg
+del 5f9efa9593cd23627649a34360a038d2b0ba088d1409e05d7bffd5572ac69f74.jpg
+del 8b0ce870bcae644795f0edfe6d0f74b6be66da2f96b86b93b6bfc1b9030181bb.jpg
+del 9c300eaf9a1b66134f5c587c0f2bc5f8c4346ad642474993ae2676384a948caa.jpg
+del 9d97c0789c1a62b14031c0918cbc04eaebf6046b4c3ea9f0874d1346929b6889.jpg
+del 9ea30248c4aaa7307fb592ed9e380e1aabe168319cb9382464714fb9307eb908.jpg
+del 11b1cf6489254d49fee1b93f2f9c6997b92b91bae8fe4dcead722684c818c175.jpg
+del 33f0e90fd378d46b07549a90da51d6d29f4644380ad48a9e707de80ffd9c234e.jpg
+del 62b1a5552468a64592d414f0f0c245ee285b858d49ab5799e80a3e1cd9ee0aff.jpg
+del 147e3ef74b7d92b27b83cfa946692109fdb529b845656181e3bccc38d447c0b6.jpg
+del 648dba77de32e2420d9d11caf96100acd1abc4a71524304ff815ed24ef45e20e.jpg
+del 832a2d3ef06b77be7099b89669be6784cfc911725e0050c52d447aa85ed537b6.jpg
+del 6981fe49f8861ed5fc2a9bbfda8433c94cc0effc29e5f39ee6ee5f0dcdb7cdb6.jpg
+del 75800b892892ad13df227e3d30b2fd67f1c1dd42c212061f33a38882f8a3d64e.jpg
+del 0167948d52fa0938a5a4bb0f4cbfdb856e07951ff4b88ea602190c137e8f5cbd.jpg
+del 372662cee15b989afffd97a8554201b83dfff02934e741533a1ab68eb1faa805.jpg
+del 96930684d242048e9ee8ffee9637d3e5f7134ca9f9edcacfffd0d1b5f3f69417.jpg
+del 871991655f2dc1d3a8768d754fbf3c59d4f0edb901b9743eb37ebb7a3661f672.jpg
+del 2625221192c134d5d0dc95a1cbaf856dac2756d2e56cd0890eacb6b29f2bc5e7.jpg
+del 452119801329f0197cb56c377d5ebcc07e4e388c13cb2e24524f1d89614ca5d1.jpg
+del b5f6d04e51aff23557224db3113c1f623d1702e57cc65c3bb91274bcc06ea7b8.jpg
+del b79aa11790fde0d34444db8bf7f750f231861715298451b7b5cb2bf80108b89e.jpg
+del bd76008df5f79219e5e94336c18c9eda1016f07d4d2ba56533fc675b1389e5f0.jpg
+del be2b786bcce71cd60ab282fe703829b1c2f9fa947389ee3505353d9a90a11b2b.jpg
+del cfe99976d8488fdb9b2bd4cde8c56b0c129130503e7e948315f79726a0bfca88.jpg
+del e570783d14262a2969753d16b32899b278c7518d08d69b7511faaeabd1f95088.jpg
+del ec969cbd12ca43794fa5cea965e3c673dee5a7d7f1011f556961012c62662ea9.jpg
+del f32965aadfce2a546255214b6284a64d8d05adb9d97d600c6f24adbdfbbea95e.jpg
+del 03f45d032803ee446ad7140add51789a1186daac94e7c6292111112eda91b94f.jpg
+del db22d3adb05c569bbbfa92288f7afc325482b54bb17ed77ddc1210e9ce8d40b6.jpg
+del 6790d9a5400c9f92f78cee26a899fbfb825329df921c632c61df3b2faae40b01.jpg
+del a627a1890b1657fbd4536e3084700d08924a8f873c4977bb378578347acb1349.jpg
